@@ -5,12 +5,15 @@
 	"main": "dist/index.cjs",
 	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
+  "license": "Apache-2.0",
+  "private": true,
 	"scripts": {
 		"dev": "parcel watch --no-hmr",
 		"build": "parcel build",
 		"lint": "eslint src",
 		"lint:fix": "eslint --fix src",
-		"prettier": "prettier --write src/**/*.ts"
+    "prettier": "prettier --check src/**/*.ts",
+		"prettier:fix": "prettier --write src/**/*.ts"
 	},
 	"dependencies": {
 		"@board-bound/sdk": "^0.1.0"

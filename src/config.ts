@@ -1,3 +1,3 @@
 export interface PluginConfig {
-  foo: string;
+  foo: string
 }
