@@ -25,6 +25,7 @@ jobs:
       - name: Install pnpm
         run: npm i -g pnpm
       - name: Replace version in package.json to be semver compatible
+        if: github.event_name == 'release'
         run: sed -i "s/IN-DEV/$(echo $GITHUB_REF | sed 's/refs\/tags\///')/" package.json
 
       # Install dependencies
