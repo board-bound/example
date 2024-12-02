@@ -1,9 +1,8 @@
 {
-  "name": "example-plugin",
+  "name": "example",
   "version": "IN-DEV",
   "source": "src/index.ts",
   "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
   "private": true,
@@ -40,6 +39,10 @@
   "targets": {
     "main": {
       "includeNodeModules": true,
+      "sourceMap": {
+        "inline": true,
+        "inlineSources": true
+      },
       "optimize": true
     }
   }

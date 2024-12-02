@@ -2,12 +2,12 @@ import {
   createSimpleEventRegistration,
   createSimplePlugin,
 } from '@board-bound/sdk'
+import { version, name } from '../package.json';
 import { PluginConfig } from './config'
 import ExampleEvent from './event'
 
 export default createSimplePlugin<PluginConfig>({
-  name: 'example',
-  version: '1.0.0',
+  name, version: version as 'IN-DEV',
   serverVersion: '>=1.0.0 <2.0.0',
   author: 'scolastico',
   events: [
